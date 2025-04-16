@@ -16,4 +16,17 @@ body {
     background: linear-gradient(135deg, #7e0fff, #3822ff);
     box-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
   }
+
+  .container.header_container {
+    position: relative; /* или absolute, если нужно выровнять по всей странице */
+  }
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;   /* уменьшите по нужде */
+    height: auto;  /* сохраняет пропорции */
+}
+
   
