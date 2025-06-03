@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #4b00ff, #19005b);
+  background: linear-gradient(135deg, #121139, #150050);
   height: 152px;
   padding-top: 1.3125rem;
   width: 100%;
@@ -87,6 +87,7 @@ header {
 /* Начало 1 блок ---------------------------------------- */
 
 .hero-block {
+  background: linear-gradient(135deg, #121139, #18005a);
   position: relative;
   flex-direction: column;
   background-color: #0f0f3c;
