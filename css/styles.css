@@ -6,7 +6,6 @@ body {
   color: white;
 }
 
-/* Центрируем только основной контент */
 .main-content {
   display: flex;
   align-items: center;
@@ -22,9 +21,8 @@ body {
   box-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
 }
 
-/* Логотип — фиксирован в углу */
 .logo {
-  position: fixed;
+  position: relative;
   top: 2rem;
   left: 5.6rem;
   width: 22%;
@@ -32,41 +30,73 @@ body {
 }
 
 
-/* Контейнер бургер-кнопки */
 .burger {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  position: relative;
   width: 30px;
-  height: 22px;
+  height: 17px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  right: 105px;
+  margin-left: auto;
   z-index: 1001;
 }
 
-/* Полоски бургер-кнопки */
+
 .burger span {
   display: block;
-  height: 4px;
-  width: 100%;
-  background: #333;
-  border-radius: 2px;
+  height: 3px;
+  width: 145%;
+  background: white;
+  border-radius: 4px;
   transition: 0.3s ease;
 }
 
-/* Меню */
-.burger-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 250px;
-  height: 100vh;
-  background: #fff;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  z-index: 1000;
-  padding: 60px 20px 20px;
+.hero {
+  position: relative;
+  color: white;
+  padding:60px 00px;
+  text-align: left;
+
+}
+
+.hero-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero h1 .highlight {
+  background: linear-gradient(to right, #6A00FF, #C800FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  color: white;
+  border: 2px solid #C800FF;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+  background: #C800FF;
+  color: #fff;
 }
