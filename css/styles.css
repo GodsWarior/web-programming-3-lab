@@ -138,7 +138,13 @@ header {
 .hero-text h1 span {
   font-size: clamp(5.4rem, 1.5vw, 1.3rem);
   letter-spacing: 0.18rem;
-  color: #9747ff;
+  color: linear-gradient(135deg, #9130f4, #4646f9);
+
+  /* Градиент для текста */
+  background: linear-gradient(135deg, #9130f4, #4646f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-text p {
@@ -363,10 +369,121 @@ header {
   }
 }
 
+
+
 /* Конец 1 блока --------------------------------------------*/
 
+.consulting-frame {
+  display: flex;
+  flex-direction: column; /* по умолчанию — вертикально */
+  align-items: center;
+  text-align: center;
+  max-width: 1728px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+}
 
-/* Конец 9 (последнего) блока --------------------------------------------*/
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Остальные стили остаются без изменений */
+.main-title {
+  letter-spacing: 0.07rem;
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #121139;
+  margin-bottom: 37px;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #9130f4, #4646f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  padding-right: 1.1rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.35;
+  text-align: center; /* Текст остается центрированным */
+  width: 100%;
+  font-size: 1.3rem;
+  margin-bottom: 0px;
+}
+
+.second-frame-image {
+  width: 100%;
+  height: 0;
+  padding-bottom: 59.1%;
+  background: url('/assets/images/image2.png') no-repeat center;
+  background-size: contain;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 75%;
+  margin: auto;
+  position: relative;
+}
+
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .consulting-frame {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .text-content {
+    text-align: left;
+    align-items: left;
+    width: 50%;
+  }
+
+  .image-container {
+    margin-right: -6rem;
+    width: 100%;
+    display: block;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    text-align: left;
+    align-items: left;
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .consulting-frame {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-content {
+    align-items: center;
+    width: 100%;
+  }
+
+  .image-container {
+    display: none;
+  }
+}
+
+
+
+/* Конец 2 блока --------------------------------------------*/
 
 footer{
   width: 100%;
