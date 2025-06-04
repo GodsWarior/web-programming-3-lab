@@ -643,6 +643,271 @@ header {
 
 
 /* Конец 3 блока --------------------------------------------*/
+
+
+.fourth-block {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  max-width: 1728px;
+  margin: 0 auto;
+}
+
+.fourth-block-title {
+  letter-spacing: 0.07rem;
+  margin-top: 7rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #121139;
+  margin-bottom: 40px;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #9130f4, #4646f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.fourth-block-subtitle {
+  padding-right: 0rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.35;
+  text-align: center;
+  width: 100%;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  color: #121139;
+  font-weight: 400;
+}
+
+.image-composition {
+  margin-top: 9.1rem;
+  margin-left: 4.7rem;
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.main-image-with-text {
+  position: relative;
+  width: 70%; /* Основная картинка занимает 70% ширины */
+}
+
+.main-image-with-text img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.overlay-image {
+  position: absolute;
+  border-radius: 8px;
+}
+
+.right-image {
+  margin-right: 11rem;
+  margin-top: -1rem;
+  top: 20%;
+  right: 5%;
+  width: 25%;
+  z-index: 2;
+}
+
+.bottom-right-image {
+  margin-right: -14rem;
+  margin-top: -20rem;
+  top: 60%;
+  right: 0;
+  width: 38%;
+  z-index: 1;
+}
+
+.image-text{
+  text-align: left;
+  margin-top: 1.5rem;
+  margin-left: -10rem;
+}
+
+.image-text h1{
+  letter-spacing: -0.025em;
+  font-stretch: condensed;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  line-height: 1.09;
+  font-weight: 700;
+  width: 100%;
+} 
+
+.image-text p{
+  padding-top: 4.2rem;
+  letter-spacing: 0.1em;
+  font-stretch: condensed;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 300;
+  width: 120%;
+} 
+
+.fourth-btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin-top: 4rem;
+  margin-left: 0rem;
+  display: inline-block;
+  padding: 1.3rem 4.1rem;
+  border: 3px solid #7b61ff;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.fourth-btn:hover {
+  background-color: #7b61ff;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .right-image,
+  .bottom-right-image {
+    display: none;
+  }
+
+  .main-image-with-text {
+    width: 100%;
+  }
+
+  .image-composition {
+    margin-left: 0;
+    padding: 0 1rem;
+  }
+
+  .image-text {
+    width:100%;
+    margin-left: 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .image-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .image-text p {
+    padding-top: 2rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .fourth-btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+  }
+}
+/* Специальные стили для 320px и меньше */
+@media (max-width: 320px) {
+  .fourth-block {
+    padding: 1rem 0.5rem;
+  }
+  
+  .main-image-with-text {
+    position: relative;
+    width: 100%;
+  }
+  
+  .main-image-with-text img {
+    height: 300px; /* Уменьшенная высота для мобилок */
+    object-fit: cover; /* Сохраняет пропорции изображения */
+    border-radius: 6px;
+  }
+
+  .fourth-block-title {
+    margin-top: 2.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.03rem;
+  }
+  
+  .fourth-block-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+  
+  .image-composition {
+    margin-top: 2rem;
+    margin-left: 0;
+    padding: 0;
+  }
+  
+  .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: white;
+
+  }
+  
+  .image-text h1 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .image-text p {
+    font-size: 0.75rem;
+    padding-top: 0;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Ограничиваем количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .fourth-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.75rem;
+    margin-top: 0;
+    background-color: #7b61ff;
+    border: 2px solid rgba(255,255,255,0.3);
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  /* Затемнение изображения для лучшей читаемости текста */
+  .main-image-with-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    border-radius: 6px;
+  }
+}
+
+
+/* Конец 4 блока --------------------------------------------*/
+
 footer{
   width: 100%;
   height: 630px;
