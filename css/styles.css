@@ -487,7 +487,7 @@ header {
 
 
 /* Основные стили секции */
-.third-block {
+.third-block{
   height: 1130px;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #121139, #18005a);
@@ -651,6 +651,7 @@ header {
   font-family: 'Poppins', sans-serif;
   max-width: 1728px;
   margin: 0 auto;
+  margin-bottom: 15.7rem;
 }
 
 .fourth-block-title {
@@ -908,229 +909,384 @@ header {
 
 /* Конец 4 блока --------------------------------------------*/
 
-footer{
-  width: 100%;
-  height: 630px;
-  margin-top: 1.8rem;
+.fivth-block {
+  height: 1040px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #121139, #18005a);
+  padding: 6.3rem 2rem 4rem 3rem;
+  text-align: center;
 }
 
-footer .contacts{
-  position: relative;
+
+.fivth-text-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.gradient-title {
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.07rem;
+  background: linear-gradient(135deg, #9130f4, #4646f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.subtitle-style {
+  letter-spacing: 0.1rem;
+  line-height: 1.35;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+.fivth-text-header h2 {
+  font-size: 3rem;
+}
+
+.fivth-text-header p {
+  margin-top: 3.9rem;
+  margin-right: 0.1rem;
+  font-size: 1.3rem;
+}
+
+.fivth-image-container {
+  margin-top: 4.7rem;
+  margin-left: 3rem;
+  position: relative; /* Чтобы текст позиционировался относительно картинки */
+  display: inline-block; /* Чтобы контейнер не растягивался на всю ширину */
+}
+
+/* Стили для изображения */
+.fivth-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* Убирает лишние отступы */
+}
+
+/* Общие стили для текста */
+.text-top-right,
+.text-center-left,
+.text-bottom-right {
+  position: absolute;
+}
+
+/* Позиционирование текста */
+.text-top-right {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 2.6rem 2rem;
+  letter-spacing: 0.14rem;
+  top: -1rem;
+  left: 27.6rem;
+}
+
+.text-center-left {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 2.6rem 4.5rem;
+  letter-spacing: 0.1rem;
+  right: 31.4rem;
+  top: 14.2rem;
+  transform: translateY(-50%);
+}
+
+.text-bottom-right {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 2.6rem 3.5rem;
+  letter-spacing: 0.1rem;
+  bottom: 1.5rem;
+  right: -15.2rem;
+}
+
+.fancy-text {
+  background: #15144a; /* Темный фон */
+  color: white;
+  border-radius: 1.8rem; /* Скругление углов */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Нежная граница */
+  box-shadow: 0 0 8px rgba(108, 92, 231, 0.6); /* Свечение по краю */
+  white-space: nowrap;
+}
+
+/* 1. Скрываем изображение на 1250px и меньше */
+@media (max-width: 1250px) {
+  .fivth-image-container img {
+    display: none;
+  }
+  
+  /* Преобразуем абсолютно позиционированные тексты в блочные */
+  .text-top-right,
+  .text-center-left,
+  .text-bottom-right {
+    letter-spacing: 0.1rem;
+    position: static !important;
+    display: block;
+    margin: 1.5rem;
+    padding: 1.5rem !important;
+    width: 100%;
+    max-width: 400px;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+}
+
+/* 2. Адаптация для планшетов (992px) */
+@media (max-width: 992px) {
+  .fivth-block {
+    height: auto;
+    padding: 4rem 2rem;
+  }
+  
+  .fivth-text-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .fivth-text-header p {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+  }
+}
+
+/* 3. Адаптация для мобильных (768px) */
+@media (max-width: 768px) {
+  .fivth-block {
+    padding: 3rem 1.5rem;
+  }
+  
+  .fivth-text-header h2 {
+    font-size: 2rem;
+  }
+  
+  .text-top-right,
+  .text-center-left,
+  .text-bottom-right {
+    width: 90%;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* 4. Мелкие мобильные (576px) */
+@media (max-width: 576px) {
+
+  .fivth-image-container{
+    margin: 0;
+  }
+  .text-top-right,
+  .text-center-left,
+  .text-bottom-right {
+    width: 80%;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.01rem;
+
+  }
+
+  .fivth-text-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .fivth-text-header p {
+    font-size: 1rem;
+  }
+  
+  .fancy-text {
+    border-radius: 1rem;
+  }
+}
+
+
+/* Конец 5 блока */
+
+.site-footer {
+  height: 710px;
+  background-color: #0c0b2e;
+  color: #ccc;
+  font-family: 'Poppins', sans-serif;
+  padding: 11.5rem 2rem;
+}
+
+.footer-container {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1200px;
+  margin: -3.2rem;
+  margin-left: 15rem;
+  margin-right: 24rem;
+}
+
+.footer-columns {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
-  padding-top: 7.1rem;
-  padding-left: 6rem;
+  justify-content: space-between;
 }
 
-footer .contacts h2{
-  color: #274C5B;
-  font-family: Roboto;
-  font-size: 1.875rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 2.625rem;
-  letter-spacing: 0.0225rem;
+.footer-column {
+  flex: 1 1 180px;
+  min-width: 150px;
 }
 
-footer .contacts p{
-  width: 16.8125rem;
-  color: #525C60;
-  font-family: "Open Sans";
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.8rem; /* 160% */
-  letter-spacing: 0.0225rem;
+.footer-column h4 {
+  width: 150% !important;
+  margin-top: 1.5rem;
+  color:#9e9ea0;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
 }
 
-.contacts-first-column h3{
-  color: #525C60;
-  font-family: "Open Sans";
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.4625rem; /* 130% */
-  letter-spacing: 0.0225rem;
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.contacts-first-column h2, .contacts-first-column p, .contacts-first-column h3{
-  text-align: right;
+.footer-column ul li {
+  margin-bottom: 0.9rem;
 }
 
-.contacts-first-column h2{
-  margin-bottom: 2.23rem;
-}
-.contacts-first-column h3{
-  margin-bottom: 0.32rem;
-}
-.contacts-first-column p{
-  margin-bottom: 2.37rem;
+.footer-column ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
 }
 
-.contacts-second-column{
+.footer-column ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-column p {
+  letter-spacing: 0.02rem;
+  width: 200%;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #585858;
+  margin: 8.2rem 0 1.5rem;
+}
+
+.footer-bottom {
+  margin-top: 1.8rem;
+  margin-left: 2.1rem;
   text-align: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  font-size: 0.8rem;
+  color: #888;
 }
 
-footer .contacts-second-column p{
-  width: 35.4375rem;
-  line-height: 2.025rem; /* 180% */
-  margin-bottom: 3.75rem;
-  margin-left: -0.07rem;
+.Subscribe{
+  letter-spacing: 0.009rem !important;
+  font-size: 1.1rem !important;
 }
+/* Адаптивность через медиазапросы */
 
-.contacts-second-column .organic_logo{
-  width: 12.5rem;
-  height: 3.5rem;
-  margin-bottom: 2.6rem;
-  margin-left: -0.2rem;
-}
-
-.contacts-second-column .icon-group{
-  max-width: 558px;
-  display: flex;
-  gap: 1.25rem;
-  margin-left: 8.15rem;
-}
-
-footer .contacts .icon-group-round{
-  position: relative;
-  width: 3.75rem;
-  height: 3.75rem;
-  border-radius: 6.25rem;
-  background: #EFF6F1;
-}
-
-footer .contacts .icon-group-round img{
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-top: 1.2rem;
-  margin-left: 0.25rem;
-}
-
-footer .contacts .contacts-third-column{
-  margin-left: -0.15rem;
-}
-footer .contacts .contacts-third-column h2{
-  margin-bottom: 1.25rem;
-}
-footer .contacts .contacts-third-column p{
-  margin-bottom: 1.52rem;
-}
-
-.vertical-line{
-  width: 0.0625rem;
-  height: 23.0625rem;
-  background-color: #D5D5D5;
-}
-
-.copyright .full-line{
-  margin-top: 9.18rem;
-  margin-bottom: 1.4rem;
-  width: 100%;
-  height: 0.0625rem;
-  background-color: #D5D5D5;
-}
-
-.copyright p{
-  min-width: 637px;
-  white-space: pre;
-  padding-left: 28.5889%;
-  color: #525C60;
-  /* text-align: center; */
-  font-family: "Open Sans";
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.025rem; /* 180% */
-  letter-spacing: 0.0225rem;
-}
-
-@media (max-width: 1439px){
-
-  footer{
-      margin-top: 0;
+/* 1. Ноутбуки (1280px и меньше) */
+@media (max-width: 1280px) {
+  .footer-container {
+    margin-left: 8rem;
+    margin-right: 12rem;
   }
+}
 
-  .first-vertical-line{
-      display: none;
-  }
-
-  footer .contacts{
-      padding-left: 0;
-      align-items: center;
-      width: 100%;
-  }
-
-  .contacts-second-column .icon-group{
-      justify-content: center;
-      margin: 0%;
-  }
-
-
-  .contacts-second-column{
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      order: 1;
-      width: 100%;
-      margin-bottom: 3rem;        
-  }
-
-  .contacts-first-column h2, .contacts-first-column p, .contacts-first-column h3{
-      text-align: center;
-  }
-  .contacts-first-column{
-      max-width: 270px;
-      order: 2;
-      margin: auto;
-  }
-
-  .second-vertical-line{
-      order: 3;
+/* 2. Планшеты (992px и меньше) */
+@media (max-width: 992px) {
+  .site-footer {
+    padding: 6rem 2rem;
   }
   
-  footer .contacts .contacts-third-column{
-      order: 4;
-      max-width: 335px;
-      text-align: center;
-      margin: auto;
+  .footer-container {
+    margin-left: 3rem;
+    margin-right: 4rem;
   }
-
-  .copyright p{
-      padding: 0;
-      margin-left: 50%;
-      transform: translate(-50%);
+  
+  .footer-columns {
+    gap: 1.5rem;
+  }
+  
+  .footer-column {
+    flex: 1 1 45%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-column h4 {
+    width: 100% !important;
+    font-size: 0.95rem;
+  }
+  
+  .footer-column p {
+    width: 100% !important;
+    font-size: 0.9rem;
+  }
+  
+  hr {
+    margin: 4rem 0 1.5rem;
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 660px)
-{
-  footer .contacts-first-column{
-      max-width: none;
-      width: 100%;
-      text-align: center;
+/* 3. Мобильные устройства (768px и меньше) */
+@media (max-width: 768px) {
+  
+  /* Скрываем наименее важную колонку */
+  .footer-column:nth-child(4) {
+    display: none;
   }
   
-  .second-vertical-line{
-      display: none;
+  .footer-column {
+    flex: 1 1 45%;
+    min-width: 140px;
   }
-
-  footer .contacts p{
-      width: auto;
+  
+  /* Скрываем описание подписки */
+  .footer-column p {
+    display: none;
   }
+  
+  .footer-column h4 {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 0.7rem;
+    font-size: 0.85rem;
+  }
+  
+  .footer-bottom {
+    margin-left: 0;
+    font-size: 0.75rem;
+  }
+}
 
-  .copyright p{
-      min-width: auto;
-      width: auto;
-      margin: 0;
-      transform: none;
-      text-align: center;
-      height: auto;
-      white-space: normal;
-      padding: 0 10px 0 10px;
+/* 4. Маленькие мобильные (480px и меньше) */
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 7rem 1rem;
+  }
+  
+  /* Оставляем только 2 колонки */
+  .footer-column:nth-child(3),
+  .footer-column:nth-child(5) {
+    display: none;
+  }
+  
+  .footer-column {
+    flex: 1 1 100%;
+  }
+  
+  .footer-column h4 {
+    margin-top: 1.5rem;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.7rem;
   }
 }
